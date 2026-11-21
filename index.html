@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PLAYORA | Music & Video</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLAYORA</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <h1 class="logo">PLAY<span>ORA</span></h1>
+                <p class="tagline">Stream in Harmony</p>
+            </div>
+
+            <nav class="navigation">
+
+                <button class="nav-link active" data-page="home">
+                    <span>⌂</span> Home
+                </button>
+
+                <button class="nav-link" data-page="music">
+                    <span>♫</span> Music
+                </button>
+
+                <button class="nav-link" data-page="videos">
+                    <span>▷</span> Videos
+                </button>
+
+                <button class="nav-link" data-page="explore">
+                    <span>✧</span> Explore
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p>YOUR MUSIC.</p>
+                <p>YOUR MOMENT.</p>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="topbar">
+
+                <div class="welcome-section">
+                    <p class="welcome">WELCOME TO</p>
+                    <h2>PLAYORA</h2>
+                </div>
+
+                <div class="top-label">
+                    Music • Videos • Entertainment
+                </div>
+
+            </header>
+
+
+            <!-- HOME PAGE -->
+            <section class="page active" id="home">
+
+                <div class="hero">
+
+                    <div class="hero-content">
+
+                        <p class="eyebrow">
+                            YOUR ENTERTAINMENT SPACE
+                        </p>
+
+                        <h1>
+                            Feel Every<br>
+                            <span>Beat.</span>
+                        </h1>
+
+                        <p class="hero-description">
+                            Discover music and enjoy your favourite
+                            videos in one place.
+                        </p>
+
+                        <button class="primary-btn" data-go="music">
+                            Explore Music
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXPERIENCE SECTION -->
+                <h2 class="section-title">
+                    Choose Your Experience
+                </h2>
+
+                <div class="experience-grid">
+
+                    <!-- MUSIC CARD -->
+                    <div class="experience-card music-card">
+
+                        <div class="card-icon">♫</div>
+
+                        <h3>Music Player</h3>
+
+                        <p>
+                            Search and listen to your favourite tracks.
+                        </p>
+
+                        <button class="outline-btn" data-go="music">
+                            Listen Now
+                        </button>
+
+                    </div>
+
+
+                    <!-- VIDEO CARD -->
+                    <div class="experience-card video-card">
+
+                        <div class="card-icon">▷</div>
+
+                        <h3>Video Player</h3>
+
+                        <p>
+                            Search and watch music videos on YouTube.
+                        </p>
+
+                        <button class="outline-btn" data-go="videos">
+                            Watch Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- MUSIC PAGE -->
+            <section class="page" id="music">
+
+                <div class="page-heading">
+
+                    <p class="eyebrow">
+                        YOUR SOUNDTRACK
+                    </p>
+
+                    <h1>
+                        Music <span>Library</span>
+                    </h1>
+
+                    <p>
+                        Search for a song and click play to listen.
+                    </p>
+
+                </div>
+
+
+                <!-- MUSIC SEARCH -->
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="musicSearch"
+                        placeholder="Search songs or artists..."
+                        autocomplete="off"
+                    >
+
+                    <button id="musicSearchButton">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <p class="message" id="musicMessage">
+                    Search for a song to get started.
+                </p>
+
+
+                <!-- MUSIC RESULTS -->
+                <div class="song-grid" id="musicResults"></div>
+
+            </section>
+
+
+
+            <!-- VIDEOS PAGE -->
+            <section class="page" id="videos">
+
+                <div class="page-heading">
+
+                    <p class="eyebrow">
+                        WATCH YOUR FAVOURITES
+                    </p>
+
+                    <h1>
+                        Music <span>Videos</span>
+                    </h1>
+
+                    <p>
+                        Find and watch music videos.
+                    </p>
+
+                </div>
+
+
+                <!-- VIDEO SEARCH -->
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="videoSearch"
+                        placeholder="Search music videos..."
+                        autocomplete="off"
+                    >
+
+                    <button id="videoSearchButton">
+                        Search
+                    </button>
+
+                </div>
+
+
+                <p class="message" id="videoMessage">
+                    Search for a video to get started.
+                </p>
+
+
+                <!-- YOUTUBE VIDEO PLAYER -->
+                <div class="video-player">
+
+                    <iframe
+                        id="youtubeFrame"
+                        src=""
+                        title="PLAYORA Video Player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+                    <h3 id="videoTitle">
+                        Select a video to watch
+                    </h3>
+
+                </div>
+
+
+                <!-- VIDEO SEARCH RESULTS -->
+                <div class="video-grid" id="videoResults"></div>
+
+            </section>
+
+
+
+            <!-- EXPLORE PAGE -->
+            <section class="page" id="explore">
+
+                <div class="page-heading">
+
+                    <p class="eyebrow">
+                        DISCOVER SOMETHING NEW
+                    </p>
+
+                    <h1>
+                        Explore <span>PLAYORA</span>
+                    </h1>
+
+                    <p>
+                        Your music and video entertainment destination.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-grid">
+
+                    <div class="experience-card music-card">
+
+                        <div class="card-icon">♫</div>
+
+                        <h3>Discover Music</h3>
+
+                        <p>
+                            Find tracks by searching for a song or artist.
+                        </p>
+
+                        <button class="outline-btn" data-go="music">
+                            Explore Music
+                        </button>
+
+                    </div>
+
+
+                    <div class="experience-card video-card">
+
+                        <div class="card-icon">▷</div>
+
+                        <h3>Discover Videos</h3>
+
+                        <p>
+                            Search for music videos and watch them.
+                        </p>
+
+                        <button class="outline-btn" data-go="videos">
+                            Explore Videos
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- BOTTOM MUSIC PLAYER -->
+    <footer class="music-player">
+
+
+        <!-- CURRENT SONG DETAILS -->
+        <div class="now-playing">
+
+            <img
+                id="playingImage"
+                src="https://placehold.co/60x60/241018/ffffff?text=Music"
+                alt="Album Cover"
+            >
+
+            <div class="song-details">
+
+                <h4 id="playingTitle">
+                    No song selected
+                </h4>
+
+                <p id="playingArtist">
+                    Choose a song to play
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PLAYER CONTROLS -->
+        <div class="player-controls">
+
+            <div class="control-buttons">
+
+                <button
+                    id="previousButton"
+                    title="Previous Song"
+                    type="button">
+                    |◀
+                </button>
+
+                <button
+                    id="playPauseButton"
+                    class="play-button"
+                    title="Play or Pause"
+                    type="button">
+                    ▶
+                </button>
+
+                <button
+                    id="nextButton"
+                    title="Next Song"
+                    type="button">
+                    ▶|
+                </button>
+
+            </div>
+
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-area">
+
+                <span id="currentTime">0:00</span>
+
+                <input
+                    type="range"
+                    id="progressBar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VOLUME CONTROL -->
+        <div class="volume-area">
+
+            <span>♪</span>
+
+            <input
+                type="range"
+                id="volumeBar"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8"
+                title="Volume"
+            >
+
+        </div>
+
+
+        <!-- AUDIO ELEMENT -->
+        <audio id="audioElement"></audio>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
